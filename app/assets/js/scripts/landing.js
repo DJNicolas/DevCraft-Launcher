@@ -304,7 +304,7 @@ function showLaunchFailure(title, desc){
  */
 async function asyncSystemScan(effectiveJavaOptions, launchAfter = true){
 
-    setLaunchDetails('Checking system info..')
+    setLaunchDetails('Vérification des infos du système..')
     toggleLaunchArea(true)
     setLaunchPercentage(0, 100)
 
@@ -323,7 +323,7 @@ async function asyncSystemScan(effectiveJavaOptions, launchAfter = true){
             'Install Manually'
         )
         setOverlayHandler(() => {
-            setLaunchDetails('Preparing Java Download..')
+            setLaunchDetails('Preparation de l\'installation Java..')
             toggleOverlay(false)
             
             try {
@@ -431,7 +431,7 @@ async function downloadJava(effectiveJavaOptions, launchAfter = true) {
     ConfigManager.save()
 
     clearInterval(extractListener)
-    setLaunchDetails('Java Installed!')
+    setLaunchDetails('Java installé')
 
     // TODO Callback hell
     // Refactor the launch functions
@@ -478,7 +478,7 @@ async function dlAsync(login = true) {
         }
     }
 
-    setLaunchDetails('Please wait..')
+    setLaunchDetails('Merci d\'attendre..')
     toggleLaunchArea(true)
     setLaunchPercentage(0, 100)
 
@@ -740,7 +740,7 @@ let newsLoadingListener = null
  */
 function setNewsLoading(val){
     if(val){
-        const nLStr = 'Checking for News'
+        const nLStr = 'Vérification des Infos'
         let dotStr = '..'
         nELoadSpan.innerHTML = nLStr + dotStr
         newsLoadingListener = setInterval(() => {
